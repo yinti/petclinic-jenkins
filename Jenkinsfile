@@ -38,7 +38,7 @@ pipeline {
             }
             steps {
                 echo '=== Pushing Petclinic Docker Image ==='
-				echo '== First login to Docker and then push to Docker Resgitry =='
+				echo '== First login to Docker and then push to Docker Registry =='
                 script {
                     GIT_COMMIT_HASH = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
                     SHORT_COMMIT = "${GIT_COMMIT_HASH[0..7]}"
